@@ -38,6 +38,11 @@ function App() {
     return () => clearInterval(timer)
   }, [])
 
+  const handleInaugurate = () => {
+    localStorage.setItem("inaugurated", "true")
+    window.open("https://www.ranipetpledge.in/", "_blank", "noopener,noreferrer")
+  }
+
   const isLocked =
     timeLeft.hours !== "00" ||
     timeLeft.minutes !== "00" ||
@@ -90,6 +95,7 @@ function App() {
           </div>
 
           <button
+            onClick={handleInaugurate}
             disabled={isLocked}
             className='mt-4 px-6 sm:px-8 py-3 rounded-full 
                        bg-orange-600 text-gray-700 
@@ -100,7 +106,6 @@ function App() {
             துவக்கம் / Inaugurate
           </button>
 
-          {/* Footer */}
           <p className='text-xs text-gray-400 italic'>
             The inauguration ceremony is scheduled to begin shortly.
           </p>
