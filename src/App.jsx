@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
 
-  const launchTime = new Date("2026-04-18T13:00:00")
+  const launchTime = new Date(2026, 3, 18, 10, 10, 0)
 
   const [timeLeft, setTimeLeft] = useState({
     hours: "00",
@@ -47,6 +47,9 @@ function App() {
     timeLeft.hours !== "00" ||
     timeLeft.minutes !== "00" ||
     timeLeft.seconds !== "00"
+
+  console.log(new Date())
+  console.log(launchTime)
 
   return (
     <div className='flex flex-col bg-neutral-100 min-h-screen'>
