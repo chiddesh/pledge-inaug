@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
 
-  const launchTime = new Date(2026, 3, 18, 10, 10, 0)
+  const launchTime = new Date(2026, 3, 18, 10, 5, 0)
 
   const [timeLeft, setTimeLeft] = useState({
     hours: "00",
